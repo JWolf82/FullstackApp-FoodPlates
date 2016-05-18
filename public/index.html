@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app='foodApp'>
+  <head>
+    <meta charset="UTF-8">
+    <title>Food App</title>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js"></script> 
+          <script type="text/javascript" src="homeController.js"></script> 
+          <script type="text/javascript" src="foodFactory.js"></script> 
+           <script type="text/javascript" src="app.js"></script> 
+
+  </head>
+  <body ng-controller="homeCtrl as hCtrl">
+  <h1>Food App</h1>
+  {{hCtrl.name}}
+  <form ng-submit="hCtrl.submitPlate(hCtrl.plate)">
+      Name:<input type="text" name="name" ng-model="hCtrl.plate.name"/>
+      <br>
+     Category: <input type="text" name="category" ng-model="hCtrl.plate.category"/>
+     <br>
+      Price: <input type="number" name="price" ng-model="hCtrl.plate.price"/>
+      <br>
+      <button type="submit">Submit</button>
+  </form>
+  </body>
+</html>
